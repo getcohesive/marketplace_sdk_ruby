@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "cohesive_marketplace_middleware"
+		},
+		{
+			"path": "cohesive_marketplace_sdk"
+		},
+		{
+			"path": "example-app"
+		}
+	],
+	"settings": {}
+}

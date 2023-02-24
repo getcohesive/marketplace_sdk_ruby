@@ -1,0 +1,5 @@
+require_relative "cohesive_marketplace_sdk/utils"
+require_relative "cohesive_marketplace_sdk/auth_details"
+
+module CohesiveMarketplaceSDK
+end

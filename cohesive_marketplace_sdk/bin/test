@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+## testing validate token
+require "cohesive_marketplace_sdk"
+begin
+  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X3BlcmlvZF9zdGFydGVkX2F0Ijo3LCJleHAiOjE2NzcyNDcyNjIsImluc3RhbmNlX2lkIjoxMiwiaXRlbXNfcGVyX3VuaXQiOjIwMCwicm9sZSI6IkFkbWluIiwidHJpYWxfaXRlbXNfY291bnQiOjEwLCJ1c2VyX2lkIjozNywidXNlcl9uYW1lIjoiQ2hpbm1heSBSZWxrYXIiLCJ3b3Jrc3BhY2VfaWQiOjUsIndvcmtzcGFjZV9uYW1lIjoic2xlZGdlaGFtbWVyIn0.-dS5yms-QibS1qmIhnltYnrB0AocNLw9UTkSKEcQAlM"
+  val = CohesiveMarketplaceSDK.validate_jwt token
+  puts val
+rescue => exception
+  puts exception
+end
