@@ -16,7 +16,12 @@ module CohesiveMarketplaceMiddleware
       authorization_header = env["HTTP_AUTHORIZATION"]
       if authorization_header&.start_with?("Bearer ")
         token = authorization_header.sub("Bearer ", "")
-        env["auth_details"] = CohesiveMarketplaceSDK.validate_jwt token
+        begin
+          env["auth_details"] = CohesiveMarketplaceSDK.validate_jwt token
+        rescue => exception
+          puts exception
+          return [401, {"Content-Type" => "text/plain"}, [exception.message]]
+        end
       else
         return [401, {"Content-Type" => "text/plain"}, ["No Token"]]
       end
