@@ -1,2 +1,4 @@
 *.env
 *.gem
+*.code-workspace
+run.sh
