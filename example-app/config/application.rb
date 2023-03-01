@@ -18,6 +18,8 @@ module ExampleApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.middleware.use CohesiveMarketplaceMiddleware::AuthMiddleware
+
+    # config.middleware.use CohesiveMarketplaceMiddleware::AuthMiddleware
+    config.middleware.use CohesiveMarketplaceMiddleware::CookieAuthMiddleware
   end
 end

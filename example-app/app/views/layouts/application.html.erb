@@ -8,9 +8,17 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script src="/scripts/sdk-client.js"></script>
+    <script src="/scripts/sdk-client-mvt.js"></script>
+
+    <script>
+    var myVar = setInterval(loadtoken(), 5 * 60 * 1000);
+    </script>
   </head>
 
   <body>
+    <h1 id="demo">Hellow</h1>
     <%= yield %>
   </body>
+
 </html>
